@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen items-center justify-center bg-black">
+    <div className="min-h-screen flex items-center justify-center bg-black text-white">
       <div className="w-full max-w-md text-center space-y-6">
         <Image
           src="/ovni.png"
@@ -13,28 +13,27 @@ export default function Home() {
           width={120}
           height={120}
           className="mx-auto"
-          priority
         />
 
         <h1 className="text-3xl font-bold">OVNI Wallet</h1>
         <p className="text-gray-400">Wallet profesional</p>
 
-        <div className="space-y-3 pt-4">
+        <div className="space-y-3">
           <Link
             href="/login"
-            className="block w-full bg-blue-600 py-2 rounded-lg hover:bg-blue-700 transition"
+            className="block bg-blue-600 py-2 rounded-lg hover:bg-blue-700"
           >
             Iniciar sesión
           </Link>
 
           <Link
             href="/register"
-            className="block w-full border border-gray-600 py-2 rounded-lg hover:bg-gray-800 transition"
+            className="block border border-gray-600 py-2 rounded-lg hover:bg-gray-800"
           >
             Crear cuenta OVNI
           </Link>
         </div>
       </div>
-    </main>
+    </div>
   );
 }
