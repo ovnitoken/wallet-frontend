@@ -11,7 +11,7 @@ export default function Dashboard() {
     const token = localStorage.getItem("token");
     if (!token) return router.push("/login");
 
-    fetch("http://localhost:3001/profile", {
+    fetch("process.env.NEXT_PUBLIC_API_URL/profile", {
       headers: { Authorization: "Bearer " + token },
     })
       .then((r) => r.json())
